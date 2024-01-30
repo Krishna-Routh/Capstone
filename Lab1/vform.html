@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input[type="text"], select, input[type="file"], textarea {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+            box-sizing: border-box;
+            padding: 8px;
+        }
+
+        p.small {
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .section-heading {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="reset"] {
+            background-color: #f44336;
+        }
+    </style>
+    <title>Employee Form</title>
+</head>
+<body>
+    <h1>Employee Form</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label for="Address">Address:</label>
+        <textarea id="Address" name="Address"></textarea>
+
+        <label for="City">City:</label>
+        <select name="City" id="City">
+            <option>Choose an option</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Kolkata">Kolkata</option>
+        </select>
+
+        <div class="section-heading">Gender:</div>
+        <p class="small">
+            <input type="radio" id="GenderMale" name="Gender" value="Male">
+            <label for="GenderMale">Male</label>
+            <input type="radio" id="GenderFemale" name="Gender" value="Female">
+            <label for="GenderFemale">Female</label>
+        </p>
+
+        <div class="section-heading">Vehicle:</div>
+        <label for="VehicleBike">
+            <input type="checkbox" id="VehicleBike" name="Vehicle" value="Bike">
+            Bike
+        </label>
+        <label for="VehicleScooty">
+            <input type="checkbox" id="VehicleScooty" name="Vehicle" value="Scooty">
+            Scooty
+        </label>
+        <label for="VehicleCar">
+            <input type="checkbox" id="VehicleCar" name="Vehicle" value="Car">
+            Car
+        </label>
+
+        <label for="Employee">Upload Employee Picture:</label>
+        <input type="file" id="Employee" name="Employee">
+
+        <button type="button">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+</body>
+</html>

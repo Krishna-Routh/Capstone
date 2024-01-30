@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Input Text Boxes</title>
+</head>
+<body>
+
+    <label for="textBox1">Text Box 1:</label>
+    <input type="text" id="textBox1" oninput="updateTextBox2()">
+    
+    <label for="textBox2">Text Box 2:</label>
+    <input type="text" id="textBox2" oninput="updateTextBox1()">
+
+    <script>
+        function updateTextBox2() {
+            var textBox1Value = document.getElementById("textBox1").value;
+            document.getElementById("textBox2").value = textBox1Value;
+        }
+
+        function updateTextBox1() {
+            var textBox2Value = document.getElementById("textBox2").value;
+            document.getElementById("textBox1").value = textBox2Value;
+        }
+    </script>
+
+</body>
+</html>

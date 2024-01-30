@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Heading</title>
+</head>
+<body>
+
+    <h1 id="colorHeading">Capstone Project</h1>
+
+    <form>
+        <label for="colorInput">Enter Color Name:</label>
+        <input type="text" id="colorInput">
+        <button type="button" onclick="changeColor()">Change Color</button>
+    </form>
+
+    <script>
+        function changeColor() {
+            var colorName = document.getElementById("colorInput").value;
+            var heading = document.getElementById("colorHeading");
+
+            // Validate if the entered color is a valid color name or code
+            if (/^[a-zA-Z]+$/.test(colorName) || /^#[0-9A-Fa-f]{6}$/.test(colorName)) {
+                heading.style.color = colorName;
+            } else {
+                alert("Invalid color name or code. Please enter a valid color name or code.");
+            }
+        }
+    </script>
+
+</body>
+</html>

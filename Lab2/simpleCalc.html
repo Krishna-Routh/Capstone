@@ -1,0 +1,27 @@
+<HTML>
+    <head>
+        <script type="text/javascript">
+
+            function buttonFunction(){
+                var num1 = parseFloat(document.getElementById("number1").value);
+                var num2 = parseFloat(document.getElementById("number2").value);
+
+                var result = num1+num2;
+                document.getElementById("result").innerHTML = result;
+            }
+
+        </script>
+        <title></title>
+    </head>
+
+    <body>
+        <h1>Simple Calculator</h1>
+        <h3>Result: <span id="result">0</span></h3>
+        <form>
+            Number 1: <input type="number" id="number1"> <br>
+            Number 2: <input type="number" id="number2"> <br>
+
+            <button onclick="buttonFunction()">Sum</button>
+        </form>
+    </body>
+</HTML>
